@@ -1,0 +1,56 @@
+html{
+  margin: 0px;
+  padding: 0px;
+width: 100vw;
+color: white;
+font-family: sans-serif;
+background-color: blue;
+text-decoration: none;
+}
+body{
+  height: 100vh;
+}
+#outputPlayer{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+  padding-left: 3vmax;
+    padding-right: 3vmax;
+}
+
+.outputImage{
+grid-column: 0 / span 1;
+justify-content: flex-end;
+
+}
+.outputStats{
+grid-column: 1 / span 1;
+font-size: 7vmax;
+
+}
+.College{
+font-size: 6vmax;
+}
+.Height{
+  font-size: 3vmax;
+  }
+  .Notables{
+    font-size: 3vmax;
+    }
+    img{
+      width: 80vmin;
+    }
+h1{
+  grid-column: 1 / span 2;
+  font-size: 9vmin;
+  text-align: center;
+margin: 2vmax;
+padding-bottom: 2vmin;
+padding-top: 3vmin;
+}
+
+//*
+.outputPlayer{
+  width: 100%;
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+}*//
