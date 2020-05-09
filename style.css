@@ -18,8 +18,8 @@ a{
 #outputPlayer{
   display: grid;
 grid-template-columns: repeat(1, 1fr);
-  padding-left: 6vw;
-    padding-right: 6vw;
+  padding-left: 4vw;
+    padding-right: 8vw;
     color: #bec0c2;
 }
 
