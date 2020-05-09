@@ -25,14 +25,24 @@ let jsonDatabase =
 "height" : " 7'0\"",
 "notable" : " Playing 10 Games in two seasons."},
 {"name" : " Steve Novak",
-"picture" : "https://www.nydailynews.com/resizer/vlcqcU1oO3-CGQYAifYhsIQnPkk=/1200x1683/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/HNDV76ZUOEOBDARARK5T3T2SVM.jpg",
+"picture" : "https://cdn.vox-cdn.com/thumbor/Uo7sjucJdQpRR6RgDwfa86Trp7k=/0x0:2659x3988/1200x800/filters:focal(1403x1076:1827x1500)/cdn.vox-cdn.com/uploads/chorus_image/image/66673095/143026358.jpg.0.jpg",
 "college" : " Marquette",
 "height" : " 6'10\"",
-"notable" : " Leading the league in 3 point percentage."}
+"notable" : " Leading the league in 3 point percentage."},
+{"name" : " Ron Baker",
+"picture" : "https://img.bleacherreport.net/img/images/photos/003/652/079/hi-res-4f38e27d4eed751badc4e5eb7819ae75_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top",
+"college" : " Wichita State University",
+"height" : " 6'4\"",
+"notable" : " Scoring 13 points vs. the Warriors."},
+{"name" : " Toney Douglas",
+"picture" : "https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.nj.com/home/njo-media/width2048/img/knicks_main/photo/toney-douglasjpg-ee36c4318924714a.jpg",
+"college" : " Florida State",
+"height" : " 6'2\"",
+"notable" : " Tying a Knicks record with nine three-pointers in a home win."}
 ]
 
 
-    var Number = jsonDatabase[Math.floor( Math.random() * jsonDatabase.length)];
+var Number = jsonDatabase[Math.floor( Math.random() * jsonDatabase.length)];
 var Ledge = document.getElementById('College');
 var Width = document.getElementById('Height');
 var Bulls = document.getElementById('Notables');
@@ -43,13 +53,15 @@ Width.textContent += Number["height"];
 Bulls.textContent += Number["notable"];
 Mother.textContent += Number["name"];
 console.log(Number);
-document.getElementById("outputStats").style.fontSize = "x-large"
+document.getElementById("outputStats").style.fontSize = "x-large";
 //console.log(Progress);
-document.style.textDecoration = "none";
-function picc(Number) {
-  var newImage = document.getElementById("outputImage")
-  newImage.createElement("IMG");
-  //newImage.classList.add("footerImage");
-  newImage.src = "https://www.nydailynews.com/resizer/vlcqcU1oO3-CGQYAifYhsIQnPkk=/1200x1683/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/HNDV76ZUOEOBDARARK5T3T2SVM.jpg";
+// document.style.textDecoration = "none";
 
+picc(Number);
+
+function picc(incomingJSON) {
+  var newImage = document.createElement("IMG");
+  //newImage.classList.add("footerImage");
+  newImage.src = incomingJSON['picture'];
+  outputImage.appendChild(newImage);
 }
